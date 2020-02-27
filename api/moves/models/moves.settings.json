@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "moves",
+  "info": {
+    "name": "moves"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "minDamage": {
+      "type": "integer"
+    },
+    "maxDamage": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "plant",
+        "fire",
+        "water",
+        "ground"
+      ]
+    },
+    "monsters": {
+      "via": "moves",
+      "collection": "monster"
+    }
+  }
+}

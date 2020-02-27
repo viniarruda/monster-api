@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "bags",
+  "info": {
+    "name": "bag"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "monster": {
+      "model": "monster",
+      "via": "bags"
+    },
+    "users": {
+      "via": "bags",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}
